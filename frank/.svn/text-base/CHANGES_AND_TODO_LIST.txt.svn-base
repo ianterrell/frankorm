@@ -1,0 +1,62 @@
+TODO:
+Zip, nada, zilch.  Got any ideas?
+
+2009.04.12
+    dateForColumnIndex: now returns null, if a null value was inserted into it's table row.  Patch by Robbie Hanson.
+
+2009.03.11
+Now importing unistd.h, which the absence of was causing some problems on the iPhone.  Reported by multiple people, but Hal Mueller actually got me to make the change.
+
+2009.03.03
+Added (int)changes; to FMDatabase.  From the sqlite docs: "This function returns the number of database rows that were changed (or inserted or deleted) by the most recent SQL statement."
+Patch contributed by Tracy Harton
+
+2009.01.02
+HAPPY NEW YEAR WOOOO!
+Added dataNoCopyForColumn: and dataNoCopyForColumnIndex: to FMResultSet.
+If you are going to use this data after you iterate over the next row, or after you close the
+result set, make sure to make a copy of the data first (or just use dataForColumn/dataForColumnIndex)
+If you don't, you're going to be in a world of hurt when you try and use the data.
+
+2008.12.29
+Some changes to make Clang's static analysis happy (http://clang.llvm.org/StaticAnalysis.html). (patch provided by Matt Comi)
+
+2008.12.14
+Added longLongIntForColumn: and longLongIntForColumnIndex: to FMResultSet. (patch provided by Will Cosgrove)
+
+2008.11.20
+Added a check for NSNull in bindObject, which works just like passing nil does (patch provded by Robert Tolar Haining)
+
+2008.11.02
+Removed the block keeping you from performing updates or selects while going through a result set.
+
+2008.10.30
+Some bug fixes + warning fixes from Brian Stern (thanks again Brian!)
+
+2008.10.03
+Fixed a crasher in FMResultSet's close where if the parent DB was already released, the result set would be talking to a bad address and fmdb went boom. (thanks to Brian Stern for the patch)
+
+2008.06.06
+Thanks to Zach Wily for the return of FMDatabaseAdditions!
+
+2008.06.03:
+Removed all exceptions, now you should use [db hadError] to check for an error.  I hate (ns)exceptions, I'm not sure why I put them in.
+Moved to google code.
+Various little cleanup thingies.
+
+2008.07.03
+Thanks to Kris Markel for some extra trace outputs, and a fix where the database would be locked if it was too busy.
+
+2008.07.10
+Thanks to Daniel Pasco and Bil Moorehead for catching a problem where the column names lookup table was created on every row iteration.  Doh! 
+
+2008.07.18
+FMDatabase will now cache statements if you turn it on using shouldCacheStatements:YES.  In theory, this should speed things up.  Test it out, let me know if it makes things good for ya.
+Note: This is pretty new code, so it hasn't gone through a lot of testing... you've been warned. (seems to work though!)
+
+2008.00.01
+Fixed a problemo that kept it from compiling for the iPhone (Thanks to Sam Steele for the patch)
+
+
+
+questions? comments? patches?  Send them to gus@flyingmeat.com

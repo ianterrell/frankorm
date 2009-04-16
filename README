@@ -1,0 +1,58 @@
+From the example:
+
+NSLog(@"There are %d users from the last run.", [User count]);
+success = [User destroyAll];
+NSLog(@"After a destroy all with success %d, there are now %d users", success, [User count]);
+
+User *frank = [User alloc];
+frank.username = @"frank";
+frank.password = @"secret";
+NSLog(@"Before saving, Frank's pk is %d", [frank.pk intValue]);
+success = [frank save];
+NSLog(@"Frank's save was successful:  %d  and his pk is now %d", success, [frank.pk intValue]);
+NSLog(@"There are now %d users", [User count]);
+
+User *jeff = [User alloc];
+jeff.username = @"jeff";
+jeff.password = @"secret";
+NSLog(@"Before saving, Jeff's pk is %d", [jeff.pk intValue]);
+success = [jeff save];
+NSLog(@"Jeff's save was successful:  %d  and his pk is now %d", success, [jeff.pk intValue]);
+NSLog(@"There are now %d users", [User count]);
+
+User *brian = [User alloc];
+brian.username = @"brian";
+brian.password = @"top'secret";
+NSLog(@"Before saving, Brian's pk is %d", [brian.pk intValue]);
+success = [brian save];
+NSLog(@"Brian's save was successful:  %d  and his pk is now %d", success, [brian.pk intValue]);
+NSLog(@"There are now %d users", [User count]);
+
+NSLog(@"There are %d users with the password 'secret', they are:", [User countWhere:@"password = ?", @"secret"]);
+for (User *u in [User findWhere:@"password = ?", @"secret"])
+  NSLog(u.username);
+  
+NSLog(@"User 3 is...");
+User *user3 = [User findByPk:[NSNumber numberWithInt:3]];
+NSLog(@"%@ identified by %@", user3.username, user3.password);
+
+
+Outputs:
+
+2009-04-16 19:19:14.670 Example[8560:20b] There are 3 users from the last run.
+2009-04-16 19:19:14.675 Example[8560:20b] After a destroy all with success 1, there are now 0 users
+2009-04-16 19:19:14.676 Example[8560:20b] Before saving, Frank's pk is 0
+2009-04-16 19:19:14.678 Example[8560:20b] Frank's save was successful:  1  and his pk is now 1
+2009-04-16 19:19:14.682 Example[8560:20b] There are now 1 users
+2009-04-16 19:19:14.682 Example[8560:20b] Before saving, Jeff's pk is 0
+2009-04-16 19:19:14.686 Example[8560:20b] Jeff's save was successful:  1  and his pk is now 2
+2009-04-16 19:19:14.691 Example[8560:20b] There are now 2 users
+2009-04-16 19:19:14.697 Example[8560:20b] Before saving, Brian's pk is 0
+2009-04-16 19:19:14.701 Example[8560:20b] Brian's save was successful:  1  and his pk is now 3
+2009-04-16 19:19:14.702 Example[8560:20b] There are now 3 users
+2009-04-16 19:19:14.703 Example[8560:20b] here!
+2009-04-16 19:19:14.703 Example[8560:20b] There are 2 users with the password 'secret', they are:
+2009-04-16 19:19:14.704 Example[8560:20b] frank
+2009-04-16 19:19:14.706 Example[8560:20b] jeff
+2009-04-16 19:19:14.707 Example[8560:20b] User 3 is...
+2009-04-16 19:19:14.708 Example[8560:20b] brian identified by top'secret

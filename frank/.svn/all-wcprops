@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/135/trunk/fmdb
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/34/trunk/fmdb/LICENSE.txt
+END
+fmdb.1
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/25/trunk/fmdb/fmdb.1
+END
+CHANGES_AND_TODO_LIST.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/135/trunk/fmdb/CHANGES_AND_TODO_LIST.txt
+END
+CONTRIBUTORS.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/135/trunk/fmdb/CONTRIBUTORS.txt
+END
+fmdb_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/25/trunk/fmdb/fmdb_Prefix.pch
+END

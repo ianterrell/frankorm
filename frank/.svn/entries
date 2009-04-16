@@ -1,0 +1,94 @@
+8
+
+dir
+135
+http://flycode.googlecode.com/svn/trunk/fmdb
+http://flycode.googlecode.com/svn
+
+
+
+2009-04-12T22:46:57.455387Z
+135
+gusmueller
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+abbd6b28-202a-0410-9014-d760cfba9e85
+
+LICENSE.txt
+file
+
+
+
+
+2009-04-16T14:12:11.000000Z
+4a85b0efadf8f0954f74d695b5c231af
+2008-07-28T21:34:59.347873Z
+34
+gusmueller
+
+fmdb.xcodeproj
+dir
+
+src
+dir
+
+fmdb.1
+file
+
+
+
+
+2009-04-16T14:12:11.000000Z
+c5843d36b86b39088693635a8652fdc0
+2008-06-04T00:59:39.469769Z
+25
+gusmueller
+
+CHANGES_AND_TODO_LIST.txt
+file
+
+
+
+
+2009-04-16T14:12:11.000000Z
+7a793d63542b8833446b4fb54e0c6042
+2009-04-12T22:46:57.455387Z
+135
+gusmueller
+
+CONTRIBUTORS.txt
+file
+
+
+
+
+2009-04-16T14:12:11.000000Z
+b95ecfe60a4f42cbbae9dae70927692a
+2009-04-12T22:46:57.455387Z
+135
+gusmueller
+
+fmdb_Prefix.pch
+file
+
+
+
+
+2009-04-16T14:12:11.000000Z
+bd21f124ac08e118c4ffefefb69bed69
+2008-06-04T00:59:39.469769Z
+25
+gusmueller
+
