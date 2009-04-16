@@ -10,8 +10,8 @@
 	1D3623250D0F684500981E51 /* ExampleAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {920, 1136}}";
-			sepNavSelRange = "{2042, 0}";
-			sepNavVisRange = "{306, 1649}";
+			sepNavSelRange = "{535, 0}";
+			sepNavVisRange = "{139, 1406}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* Example */ = {
@@ -148,6 +148,14 @@
 			3C75BE440F97D8AC000ECA50 /* PBXTextBookmark */ = 3C75BE440F97D8AC000ECA50 /* PBXTextBookmark */;
 			3C75BE450F97D8AC000ECA50 /* PBXTextBookmark */ = 3C75BE450F97D8AC000ECA50 /* PBXTextBookmark */;
 			3C75BE460F97D8AC000ECA50 /* PBXTextBookmark */ = 3C75BE460F97D8AC000ECA50 /* PBXTextBookmark */;
+			3C75BE480F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE480F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE490F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE490F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE4A0F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE4A0F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE4B0F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE4B0F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE4C0F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE4C0F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE4D0F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE4D0F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE4E0F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE4E0F97F531000ECA50 /* PBXTextBookmark */;
+			3C75BE4F0F97F531000ECA50 /* PBXTextBookmark */ = 3C75BE4F0F97F531000ECA50 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 3C75BC360F978A8A000ECA50 /* Source Control */;
 		userBuildSettings = {
@@ -215,9 +223,9 @@
 	};
 	3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1111, 2330}}";
-			sepNavSelRange = "{197, 0}";
-			sepNavVisRange = "{0, 1145}";
+			sepNavIntBoundsRect = "{{0, 0}, {1111, 2344}}";
+			sepNavSelRange = "{1739, 0}";
+			sepNavVisRange = "{1370, 1128}";
 		};
 	};
 	3C75BDC80F97BE8A000ECA50 /* User.h */ = {
@@ -323,7 +331,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 71";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2032;
 		rType = 0;
 		vrLen = 493;
 		vrLoc = 3379;
@@ -427,7 +435,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 71";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2032;
 		rType = 0;
 		vrLen = 493;
 		vrLoc = 3379;
@@ -585,7 +593,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 71";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2032;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 3352;
@@ -635,7 +643,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 71";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2032;
 		rType = 0;
 		vrLen = 487;
 		vrLoc = 3379;
@@ -686,7 +694,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 65";
 		rLen = 0;
-		rLoc = 1756;
+		rLoc = 1739;
 		rType = 0;
 		vrLen = 697;
 		vrLoc = 1565;
@@ -716,7 +724,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 70";
 		rLen = 0;
-		rLoc = 2014;
+		rLoc = 1997;
 		rType = 0;
 		vrLen = 1080;
 		vrLoc = 1367;
@@ -736,7 +744,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 65";
 		rLen = 0;
-		rLoc = 1756;
+		rLoc = 1739;
 		rType = 0;
 		vrLen = 697;
 		vrLoc = 1565;
@@ -776,7 +784,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 70";
 		rLen = 0;
-		rLoc = 2014;
+		rLoc = 1997;
 		rType = 0;
 		vrLen = 1080;
 		vrLoc = 1367;
@@ -856,7 +864,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 70";
 		rLen = 0;
-		rLoc = 2014;
+		rLoc = 1997;
 		rType = 0;
 		vrLen = 1127;
 		vrLoc = 1178;
@@ -866,7 +874,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 67";
 		rLen = 0;
-		rLoc = 1940;
+		rLoc = 1923;
 		rType = 0;
 		vrLen = 1069;
 		vrLoc = 1972;
@@ -876,7 +884,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 67";
 		rLen = 0;
-		rLoc = 1940;
+		rLoc = 1923;
 		rType = 0;
 		vrLen = 1085;
 		vrLoc = 1955;
@@ -896,7 +904,7 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 67";
 		rLen = 0;
-		rLoc = 1940;
+		rLoc = 1923;
 		rType = 0;
 		vrLen = 1085;
 		vrLoc = 1955;
@@ -976,9 +984,89 @@
 		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
 		name = "FrankObject.m: 82";
 		rLen = 0;
-		rLoc = 2251;
+		rLoc = 2234;
 		rType = 0;
 		vrLen = 1160;
 		vrLoc = 2043;
+	};
+	3C75BE480F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C75BDBE0F97BE6C000ECA50 /* FrankObject.h */;
+		name = "FrankObject.h: 30";
+		rLen = 0;
+		rLoc = 552;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 125;
+	};
+	3C75BE490F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ExampleAppDelegate.m */;
+		name = "ExampleAppDelegate.m: 24";
+		rLen = 0;
+		rLoc = 535;
+		rType = 0;
+		vrLen = 1406;
+		vrLoc = 139;
+	};
+	3C75BE4A0F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
+		name = "FrankObject.m: 12";
+		rLen = 0;
+		rLoc = 197;
+		rType = 0;
+		vrLen = 948;
+		vrLoc = 0;
+	};
+	3C75BE4B0F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
+		name = "FrankObject.m: 82";
+		rLen = 0;
+		rLoc = 2234;
+		rType = 0;
+		vrLen = 1427;
+		vrLoc = 597;
+	};
+	3C75BE4C0F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C75BDBE0F97BE6C000ECA50 /* FrankObject.h */;
+		name = "FrankObject.h: 30";
+		rLen = 0;
+		rLoc = 552;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 125;
+	};
+	3C75BE4D0F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
+		name = "FrankObject.m: 12";
+		rLen = 0;
+		rLoc = 197;
+		rType = 0;
+		vrLen = 1145;
+		vrLoc = 0;
+	};
+	3C75BE4E0F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ExampleAppDelegate.m */;
+		name = "ExampleAppDelegate.m: 24";
+		rLen = 0;
+		rLoc = 535;
+		rType = 0;
+		vrLen = 1406;
+		vrLoc = 139;
+	};
+	3C75BE4F0F97F531000ECA50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C75BDBF0F97BE6C000ECA50 /* FrankObject.m */;
+		name = "FrankObject.m: 66";
+		rLen = 0;
+		rLoc = 1739;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 1370;
 	};
 }

@@ -64,7 +64,6 @@
 }
 
 +(int)countWhere:(NSString *)whereClause arguments:(va_list)args {
-NSLog(@"here!");
   FMDatabase *db = [Frank sharedDatabase];
   FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"SELECT COUNT(*) FROM %@ WHERE %@;", [[self class] tableName], whereClause] arguments:args];
   int count = 0;

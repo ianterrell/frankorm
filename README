@@ -50,7 +50,6 @@ Outputs:
 2009-04-16 19:19:14.697 Example[8560:20b] Before saving, Brian's pk is 0
 2009-04-16 19:19:14.701 Example[8560:20b] Brian's save was successful:  1  and his pk is now 3
 2009-04-16 19:19:14.702 Example[8560:20b] There are now 3 users
-2009-04-16 19:19:14.703 Example[8560:20b] here!
 2009-04-16 19:19:14.703 Example[8560:20b] There are 2 users with the password 'secret', they are:
 2009-04-16 19:19:14.704 Example[8560:20b] frank
 2009-04-16 19:19:14.706 Example[8560:20b] jeff
