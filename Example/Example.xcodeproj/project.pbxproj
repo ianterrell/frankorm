@@ -29,6 +29,7 @@
 		3C75BE570F981C8A000ECA50 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BE530F981C8A000ECA50 /* Group.m */; };
 		3C75BE580F981C8A000ECA50 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BE550F981C8A000ECA50 /* User.m */; };
 		3C75BE860F981DD4000ECA50 /* Opinion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75BE850F981DD4000ECA50 /* Opinion.m */; };
+		3C75BEBE0F98DA1B000ECA50 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 3C75BEBD0F98DA1A000ECA50 /* generator.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		3C75BE550F981C8A000ECA50 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3C75BE840F981DD4000ECA50 /* Opinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opinion.h; sourceTree = "<group>"; };
 		3C75BE850F981DD4000ECA50 /* Opinion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Opinion.m; sourceTree = "<group>"; };
+		3C75BEBD0F98DA1A000ECA50 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Example-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 				3C75BE530F981C8A000ECA50 /* Group.m */,
 				3C75BE540F981C8A000ECA50 /* User.h */,
 				3C75BE550F981C8A000ECA50 /* User.m */,
+				3C75BEBD0F98DA1A000ECA50 /* generator.rb */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				3C75BDC50F97BE6C000ECA50 /* LICENSE.txt in Resources */,
 				3C75BDE40F97BFB0000ECA50 /* IMG_0225.jpg in Resources */,
 				3C75BE010F97D2BA000ECA50 /* example.db in Resources */,
+				3C75BEBE0F98DA1B000ECA50 /* generator.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
