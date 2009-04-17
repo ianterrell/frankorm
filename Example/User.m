@@ -8,10 +8,15 @@
 
 #import "User.h"
 #import "Frank.h"
+#import "Group.h"
+#import "Opinion.h"
+
 
 @implementation User
 
-@synthesize username, password, awesomenessCode;
+@synthesize username, password, awesomenessCode, groupPk;
+@synthesize _group;
+@synthesize _opinions;
 
 
 #pragma mark Create and Update
@@ -23,15 +28,56 @@
 -(BOOL)save {
   NSString *sql = nil;
   if ([self isNewRecord])
-    sql = @"INSERT INTO users (username, password, awesomeness_code) VALUES (?, ?, ?);";
+    sql = @"INSERT INTO users (username, password, awesomeness_code, group_pk) VALUES (?, ?, ?, ?);";
   else
-    sql = [NSString stringWithFormat:@"UPDATE users SET username = ?, password = ?, awesomeness_code = ? WHERE pk = %d;", [pk intValue]];
+    sql = [NSString stringWithFormat:@"UPDATE users SET username = ?, password = ?, awesomeness_code = ?, group_pk = ? WHERE pk = %d;", [pk intValue]];
 
   FMDatabase *db = [Frank sharedDatabase];
-  BOOL success = [db executeUpdate:sql, username, password, awesomenessCode];
+  BOOL success = [db executeUpdate:sql, username, password, awesomenessCode, groupPk];
   if (success)
     self.pk = [FrankObject lastInsertRowId];
   return success;
+}
+
+#pragma mark Relationships
+
+-(Group *)group {
+  if (groupPk == nil)
+    return nil;
+  else if (_group == nil)
+    _group = [Group findByPk:groupPk];
+  return _group;
+}
+
+-(Group *)groupWithReload {
+  if (groupPk == nil)
+    return nil;
+  _group = [Group findByPk:groupPk];
+  return _group;
+}
+
+-(void)setGroup:(Group *)obj {
+  groupPk = [obj pk];
+  [_group release];
+  [obj retain];
+  _group = obj;
+}
+
+-(NSArray *)opinions {
+  if (_opinions == nil)
+    _opinions = [Opinion findWhere:@"user_pk = ?", pk];
+  return _opinions;
+}
+
+-(NSArray *)opinionsWithReload {
+  _opinions = [Opinion findWhere:@"user_pk = ?", pk];
+  return _opinions;
+}
+
+-(int)opinionsCount {
+  if (_opinions == nil)
+    return [Opinion countWhere:@"user_pk = ?", pk];
+  return [_opinions count];
 }
 
 #pragma mark Helper Methods
@@ -43,16 +89,19 @@
   user.username = [rs stringForColumn:@"username"];
   user.password = [rs stringForColumn:@"password"];
   user.awesomenessCode = [NSNumber numberWithInt:[rs intForColumn:@"awesomeness_code"]];
+  user.groupPk = [NSNumber numberWithInt:[rs intForColumn:@"group_pk"]];
   return [user autorelease];
 }
 
 #pragma mark Boilerplate
 
-- (void)dealloc
-{
+- (void)dealloc {
   [username release];
   [password release];
   [awesomenessCode release];
+  [groupPk release];
+  [_group release];
+  [_opinions release];
 	[super dealloc];
 }
 

@@ -1,23 +1,57 @@
+This is one half of a two part ORM system.  This contains the common code, but individual classes
+need to specify their relationships and how they should be saved to the database.  You could
+write it all by hand, which would not be very bright, or you could generate it.
+
+The generator is available in this project:
+http://github.com/ianterrell/objc-generators/tree/master
+
+Here's the generator code (Ruby) for the models used in the example project:
+
+class Objects < FrankORMGenerator
+  project_name "FrankApp"
+  directory "frankapp"
+  author "Ian Terrell"
+  
+  frank_object :user do |user|
+    user.string :username
+    user.string :password
+    user.number :awesomeness_code
+    user.belongs_to :group
+    user.has_many :comments
+  end
+  
+  frank_object :group do |group|
+    group.string :name
+    group.has_many :users
+  end
+  
+  frank_object :comment do |comment|
+    comment.string :opinion
+    comment.belongs_to :user
+  end
+end  
+
+
 From the example:
 
-NSLog(@"There are %d users from the last run.", [User count]);
-success = [User destroyAll];
-NSLog(@"After a destroy all with success %d, there are now %d users", success, [User count]);
+NSLog(@"There are %d users and %d opinions from the last run.", [User count], [Opinion count]);
+success = [User destroyAll] && [Opinion destroyAll];
+NSLog(@"After a destroy all with success %d, there are now %d users and %d opinions", success, [User count], [Opinion count]);
 
 User *frank = [User alloc];
 frank.username = @"frank";
 frank.password = @"secret";
 NSLog(@"Before saving, Frank's pk is %d", [frank.pk intValue]);
 success = [frank save];
-NSLog(@"Frank's save was successful:  %d  and his pk is now %d", success, [frank.pk intValue]);
-NSLog(@"There are now %d users", [User count]);
+NSLog(@"Frank's save had success %d and his pk is now %d", success, [frank.pk intValue]);
+NSLog(@"There is now %d user", [User count]);
 
 User *jeff = [User alloc];
 jeff.username = @"jeff";
 jeff.password = @"secret";
 NSLog(@"Before saving, Jeff's pk is %d", [jeff.pk intValue]);
 success = [jeff save];
-NSLog(@"Jeff's save was successful:  %d  and his pk is now %d", success, [jeff.pk intValue]);
+NSLog(@"Jeff's save had success %d and his pk is now %d", success, [jeff.pk intValue]);
 NSLog(@"There are now %d users", [User count]);
 
 User *brian = [User alloc];
@@ -25,7 +59,7 @@ brian.username = @"brian";
 brian.password = @"top'secret";
 NSLog(@"Before saving, Brian's pk is %d", [brian.pk intValue]);
 success = [brian save];
-NSLog(@"Brian's save was successful:  %d  and his pk is now %d", success, [brian.pk intValue]);
+NSLog(@"Brian's save had success %d and his pk is now %d", success, [brian.pk intValue]);
 NSLog(@"There are now %d users", [User count]);
 
 NSLog(@"There are %d users with the password 'secret', they are:", [User countWhere:@"password = ?", @"secret"]);
@@ -36,22 +70,41 @@ NSLog(@"User 3 is...");
 User *user3 = [User findByPk:[NSNumber numberWithInt:3]];
 NSLog(@"%@ identified by %@", user3.username, user3.password);
 
+Opinion *o1 = [Opinion alloc];
+o1.value = @"French fries are delicious.";
+[o1 setUser:brian];
+[o1 save];
+NSLog(@"Who thinks french fries are delicious?  %@ does", o1.user.username);
+Opinion *o2 = [Opinion alloc];
+o2.value = @"Hamburgers are delicious.";
+o2.userPk = brian.pk;
+[o2 save];
+NSLog(@"Who thinks hamburgers are delicious?  %@ does", o2.user.username);
+
+NSLog(@"Brian has %d opinions... they are:", [brian opinionsCount]);
+for (Opinion *o in brian.opinions)
+  NSLog(o.value);
 
 Outputs:
 
-2009-04-16 19:19:14.670 Example[8560:20b] There are 3 users from the last run.
-2009-04-16 19:19:14.675 Example[8560:20b] After a destroy all with success 1, there are now 0 users
-2009-04-16 19:19:14.676 Example[8560:20b] Before saving, Frank's pk is 0
-2009-04-16 19:19:14.678 Example[8560:20b] Frank's save was successful:  1  and his pk is now 1
-2009-04-16 19:19:14.682 Example[8560:20b] There are now 1 users
-2009-04-16 19:19:14.682 Example[8560:20b] Before saving, Jeff's pk is 0
-2009-04-16 19:19:14.686 Example[8560:20b] Jeff's save was successful:  1  and his pk is now 2
-2009-04-16 19:19:14.691 Example[8560:20b] There are now 2 users
-2009-04-16 19:19:14.697 Example[8560:20b] Before saving, Brian's pk is 0
-2009-04-16 19:19:14.701 Example[8560:20b] Brian's save was successful:  1  and his pk is now 3
-2009-04-16 19:19:14.702 Example[8560:20b] There are now 3 users
-2009-04-16 19:19:14.703 Example[8560:20b] There are 2 users with the password 'secret', they are:
-2009-04-16 19:19:14.704 Example[8560:20b] frank
-2009-04-16 19:19:14.706 Example[8560:20b] jeff
-2009-04-16 19:19:14.707 Example[8560:20b] User 3 is...
-2009-04-16 19:19:14.708 Example[8560:20b] brian identified by top'secret
+There are 3 users and 2 opinions from the last run.
+After a destroy all with success 1, there are now 0 users and 0 opinions
+Before saving, Frank's pk is 0
+Frank's save had success 1 and his pk is now 1
+There is now 1 user
+Before saving, Jeff's pk is 0
+Jeff's save had success 1 and his pk is now 2
+There are now 2 users
+Before saving, Brian's pk is 0
+Brian's save had success 1 and his pk is now 3
+There are now 3 users
+There are 2 users with the password 'secret', they are:
+frank
+jeff
+User 3 is...
+brian identified by top'secret
+Who thinks french fries are delicious?  brian does
+Who thinks hamburgers are delicious?  brian does
+Brian has 2 opinions... they are:
+French fries are delicious.
+Hamburgers are delicious.

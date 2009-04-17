@@ -9,16 +9,32 @@
 #import <Foundation/Foundation.h>
 #import "FrankObject.h"
 
+@class Group;
 
 @interface User : FrankObject {
   NSString *username;
   NSString *password;
   NSNumber *awesomenessCode;
+  NSNumber *groupPk;
+
+  Group *_group;
+  NSArray *_opinions;
 }
 
 @property(nonatomic,retain) NSString *username;
 @property(nonatomic,retain) NSString *password;
 @property(nonatomic,retain) NSNumber *awesomenessCode;
+@property(nonatomic,retain) NSNumber *groupPk;
+
+@property(nonatomic,retain) Group *_group;
+-(Group *)group;
+-(Group *)groupWithReload;
+-(void)setGroup:(Group *)obj;
+
+@property(nonatomic,retain) NSArray *_opinions;
+-(NSArray *)opinions;
+-(NSArray *)opinionsWithReload;
+-(int)opinionsCount;
 
 
 @end

@@ -2,5 +2,17 @@ CREATE TABLE IF NOT EXISTS users (
   pk INTEGER PRIMARY KEY,
   username TEXT NOT NULL,
   password TEXT NOT NULL,
-  awesomeness_code INTEGER
+  awesomeness_code INTEGER,
+  group_pk INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS groups (
+  pk INTEGER PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS opinions (
+  pk INTEGER PRIMARY KEY,
+  value TEXT NOT NULL,
+  user_pk INTEGER
 );
